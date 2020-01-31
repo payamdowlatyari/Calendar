@@ -55,7 +55,13 @@ public class Main {
         event1.viewTimer();
 
         calendar1.addEvent(event1);
+        user1.displayCalendar(calendar1);
+
         calendar1.removeEvent(event1);
+
+
+        user1.displayCalendar(calendar1);
+
 
 
 //

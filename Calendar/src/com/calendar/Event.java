@@ -1,10 +1,11 @@
 package com.calendar;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Event {
     String title;
-    User sharedUser [];
+    ArrayList<User> sharedUser;
     int hour, minute ;
     Date startingTime;
     Date endingTime;
@@ -31,7 +32,6 @@ public class Event {
 
     public void setEndingTime(int y, int m, int d){
         endingTime = new Date(y, m, d);
-
     }
 
     public void repeatEvent(boolean repeat){

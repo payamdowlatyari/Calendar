@@ -19,7 +19,10 @@ public class User {
     }
 
     public void displayCalendar(Calendar calendar){
-        System.out.println("Dispaly calendar");
-        //System.out.println(calendar.events.get(0).title);
+        System.out.println("Dispaly Events:");
+
+        for(int i = 0; i < calendar.events.size(); i++) {
+            System.out.print(calendar.events.get(i).title);
+        }
     }
 }

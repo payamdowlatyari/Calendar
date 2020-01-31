@@ -22,11 +22,12 @@ public class Calendar extends GregorianCalendar {
         this.events.add(event);
     }
 
-    public void removeEvent(Event event){
-        events.remove(event);
+    public void removeEvent(Event event){ this.events.remove(event); }
+    public void updateEvent(Event event, String title){
 
-    }
-    public void updateEvent(){
+        this.events.remove(event);
+        Event newEvent = new Event(title);
+        this.events.add(newEvent);
 
 
     }
