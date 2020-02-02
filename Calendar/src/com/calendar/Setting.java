@@ -20,7 +20,6 @@ public class Setting {
 
         System.out.println("Theme has changed to: " + theme);
 
-
     }
 
     public void changeTimeZone(String timeZone) {
