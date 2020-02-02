@@ -23,6 +23,7 @@ public class Calendar extends GregorianCalendar {
     }
 
     public void removeEvent(Event event){ this.events.remove(event); }
+
     public void updateEvent(Event event, String title){
         this.events.remove(event);
         Event newEvent = new Event(title);

@@ -41,13 +41,10 @@ public class Event {
     public void viewTimer(){
 
         CountTimer timer = new CountTimer();
+        //timer.countRemainTime(startingTime);
+        //timer.scheduledExecutionTime();
 
-       // Date time = new Date(0,0,0);
-
-        timer.countRemainTime(startingTime);
-//        timer.remainTime = startingTime;
-//        System.out.println(timer.remainTime);
-
+        System.out.println(timer.scheduledExecutionTime());
 
     }
 }

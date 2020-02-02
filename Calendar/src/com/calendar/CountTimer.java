@@ -1,10 +1,12 @@
 package com.calendar;
 
 import java.util.Date;
+import java.util.TimerTask;
 
-public class CountTimer {
+public class CountTimer extends TimerTask {
 
     Date remainTime;
+    int countdown = 100;
 
     public void countRemainTime(Date startingTime){
 
@@ -20,7 +22,11 @@ public class CountTimer {
             System.out.println(todayDate);
 
         }
+    }
 
-
+    @Override
+    public void run() {
+        countdown = countdown - 1;
+        System.out.println(countdown);
     }
 }

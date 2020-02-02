@@ -16,17 +16,37 @@ public class Main {
 
             User user = register();
 
-            Calendar calendar1 = login();
-            user.calendars.add(calendar1);
+            int response2 = 1;
+
+            do {
+                Calendar calendar = createCalendar();
+                user.calendars.add(calendar);
+
+                System.out.println("Would you like to add more calendars? 1)Yes 2)No");
+                response2 = input.nextInt();
+            }while (response2 == 1);
 
             users.add(user);
+
 
             System.out.println("Would you like to add more users? 1)Yes 2)No");
             response = input.nextInt();
 
+
+
         } while (response == 1);
 
-            //user.displayCalendar(calendar1);
+        View view = new View(users.get(0).calendars.get(0).getTime());
+
+        view.viewByDay(users.get(0).calendars.get(0));
+
+        //users.get(0).calendars.get(0).events.get(0).viewTimer();
+
+        //users.get(0).calendars.get(0).events.get(0).viewTimer();
+
+          //  users.get(0).displayCalendar(users.get(0).calendars.get(0));
+
+       // System.out.println(users.get(0).calendars.get(0).getTime());
 
 
 
@@ -40,7 +60,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter your username: ");
-        String name = input.nextLine();
+        String username = input.nextLine();
         String theme, timeZone;
 
 
@@ -50,16 +70,15 @@ public class Main {
         System.out.println("Choose time zone:");
         timeZone = input.nextLine();
 
-        Setting setting1 = new Setting(theme,timeZone);
+        Setting setting = new Setting(theme,timeZone);
 
-        User user1 = new User(name, setting1);
+        User user = new User(username, setting);
 
-
-        return user1;
+        return user;
 
     }
 
-    public static Calendar login(){
+    public static Calendar createCalendar(){
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter 1)Public or 2)Private");
@@ -72,40 +91,46 @@ public class Main {
             String calendarName = input.nextLine();
             Calendar calendar = new Calendar(calendarName);
 
-            System.out.println("Enter your event's title:");
-            String eventTitle = input.nextLine();
-            Event event = new Event(eventTitle);
+            System.out.println("Would you like to add an event? 1)Yes 2)No");
+            int response = input.nextInt();
 
-            System.out.println("Enter year:");
-            int year = input.nextInt();
+            while (response == 1) {
 
-            System.out.println("Enter month");
-            int month = input.nextInt();
+                System.out.println("Enter your event's title:");
+                String eventTitle = input.nextLine();
+                Event event = new Event(eventTitle);
 
-            System.out.println("Enter day");
-            int day = input.nextInt();
+                System.out.println("Enter year:");
+                int year = input.nextInt();
 
-            event.setStartingTime(year, month, day);
-            event.setEndingTime(year, month, day);
+                System.out.println("Enter month");
+                int month = input.nextInt();
 
-            System.out.println("Enter hour");
-            int hour = input.nextInt();
-            event.setHour(hour);
+                System.out.println("Enter day");
+                int day = input.nextInt();
 
-            System.out.println("Enter minute");
-            int minute = input.nextInt();
-            event.setMinutes(minute);
+                event.setStartingTime(year, month, day);
+                event.setEndingTime(year, month, day);
 
-            System.out.println("Would you like to repeat this event? 1)Yes 2)No");
-            int repeat = input.nextInt();
-            if (repeat == 1) {
-                event.repeatEvent(true);
+                System.out.println("Enter hour");
+                int hour = input.nextInt();
+                event.setHour(hour);
+
+                System.out.println("Enter minute");
+                int minute = input.nextInt();
+                event.setMinutes(minute);
+
+                System.out.println("Would you like to repeat this event? 1)Yes 2)No");
+                int repeat = input.nextInt();
+                if (repeat == 1) {
+                    event.repeatEvent(true);
+                } else {
+                    event.repeatEvent(false);
+                }
+
+
+                calendar.addEvent(event);
             }
-            else {
-                event.repeatEvent(false);
-            }
-            calendar.events.add(event);
-
             return calendar;
 
         }
@@ -118,39 +143,45 @@ public class Main {
 
             calendar.setPublicity(false);
 
-            System.out.println("Enter your event's title: ");
-            String eventTitle = input.nextLine();
-            Event event = new Event(eventTitle);
+            System.out.println("Would you like to add an event? 1)Yes 2)No");
+            int response = input.nextInt();
 
-            System.out.println("Enter year:");
-            int year = input.nextInt();
+            while (response == 1) {
 
-            System.out.println("Enter month");
-            int month = input.nextInt();
+                System.out.println("Enter your event's title: ");
+                String eventTitle = input.nextLine();
+                Event event = new Event(eventTitle);
 
-            System.out.println("Enter day");
-            int day = input.nextInt();
+                System.out.println("Enter year:");
+                int year = input.nextInt();
 
-            event.setStartingTime(year, month, day);
-            event.setEndingTime(year, month, day);
+                System.out.println("Enter month");
+                int month = input.nextInt();
 
-            System.out.println("Enter hour");
-            int hour = input.nextInt();
-            event.setHour(hour);
+                System.out.println("Enter day");
+                int day = input.nextInt();
 
-            System.out.println("Enter minute");
-            int minute = input.nextInt();
-            event.setMinutes(minute);
+                event.setStartingTime(year, month, day);
+                event.setEndingTime(year, month, day);
 
-            System.out.println("Would you like to repeat this event? 1)Yes 2)No");
-            int repeat = input.nextInt();
-            if (repeat == 1) {
-                event.repeatEvent(true);
+                System.out.println("Enter hour");
+                int hour = input.nextInt();
+                event.setHour(hour);
+
+                System.out.println("Enter minute");
+                int minute = input.nextInt();
+                event.setMinutes(minute);
+
+                System.out.println("Would you like to repeat this event? 1)Yes 2)No");
+                int repeat = input.nextInt();
+                if (repeat == 1) {
+                    event.repeatEvent(true);
+                } else {
+                    event.repeatEvent(false);
+                }
+                calendar.addEvent(event);
+
             }
-            else {
-                event.repeatEvent(false);
-            }
-            calendar.events.add(event);
 
             return calendar;
 
