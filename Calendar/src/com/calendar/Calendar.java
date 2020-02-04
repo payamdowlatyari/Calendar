@@ -29,12 +29,21 @@ public class Calendar extends GregorianCalendar {
         Event newEvent = new Event(title);
         this.events.add(newEvent);
     }
-    public void filterCalendar(){
+    public Event filterCalendar(String keyword){
+
+        for (int i=0; i<events.size(); i++){
+            if (events.get(i).title.equals(keyword) ){
+
+                return events.get(i);
+            }
+
+        }
+        return null;
 
     }
 
-    public int selectEvent(String event){
-        return events.indexOf(event);
+    public Event selectEvent(int index){
+        return events.get(index);
     }
 
     public void getEvent(){

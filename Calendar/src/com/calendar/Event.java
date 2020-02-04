@@ -41,9 +41,8 @@ public class Event {
     public void viewTimer(){
 
         CountTimer timer = new CountTimer();
-        //timer.countRemainTime(startingTime);
-        //timer.scheduledExecutionTime();
-
+        timer.countRemainTime(startingTime);
+        timer.scheduledExecutionTime();
         System.out.println(timer.scheduledExecutionTime());
 
     }
