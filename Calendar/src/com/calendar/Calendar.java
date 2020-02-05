@@ -1,3 +1,5 @@
+//Payam Dowlatyari
+//Calendar
 package com.calendar;
 
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ public class Calendar extends GregorianCalendar {
     ArrayList<Event> events;
     View view;
 
-    public Calendar(String name){
+    public Calendar(String name){//constructor
 
         this.calendarType = "Gregorian";
         this.name = name;

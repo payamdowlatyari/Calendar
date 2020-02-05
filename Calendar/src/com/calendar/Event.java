@@ -1,3 +1,5 @@
+//Payam Dowlatyari
+//Event
 package com.calendar;
 
 import java.util.ArrayList;
@@ -40,7 +42,7 @@ public class Event {
 
     public void viewTimer(){
 
-        CountTimer timer = new CountTimer();
+        this.timer = new CountTimer();
         timer.countRemainTime(startingTime);
         timer.scheduledExecutionTime();
         System.out.println(timer.scheduledExecutionTime());

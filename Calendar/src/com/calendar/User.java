@@ -1,17 +1,18 @@
+//Payam Dowlatyari
+//User
 package com.calendar;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 public class User {
 
     String username;
-    ArrayList<Calendar> calendars;
+    ArrayList<Calendar> calendars;//Contains all Calendar objects
     String searchQuery;
     Setting setting;
 
 
-    public User(String username, Setting setting) {
+    public User(String username, Setting setting) {//constructor
 
         this.username = username;
         this.setting = setting;
@@ -19,33 +20,24 @@ public class User {
 
     }
 
-    public void displayCalendar(Calendar calendar){
+    public void displayCalendars(){//method to display all the calendars
 
-        GregorianCalendar cal = new GregorianCalendar();
-
-        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
-        int month = cal.get(Calendar.MONTH);
-        int year = cal.get(Calendar.YEAR);
-        int weekday = cal.get(Calendar.DAY_OF_WEEK);
-
-        cal.add(Calendar.DAY_OF_MONTH, 100);
-        GregorianCalendar birthday = new GregorianCalendar(1994, Calendar.JANUARY, 1);
-        birthday.add(Calendar.DAY_OF_MONTH, 10000);
-
-        System.out.printf("Todays date is " +month + "/" +dayOfMonth +"/" +year +".");
-        System.out.printf(" It is day " +weekday +" of the week");
-        System.out.println("");
+        for (int i=0; i<calendars.size(); i++){
+            System.out.println(calendars.get(i).name);
+        }
 
     }
 
-    public Calendar searchCalendar (String searchQuery){
+    public int searchCalendar (String searchQuery){//method to search the calendars and return a Calendar object
+                                                        //that has the same name as the search string
         this.searchQuery = searchQuery;
 
         for (int i=0; i< calendars.size(); i++){
-            if (searchQuery == calendars.get(i).name){
-                return calendars.get(i);
+            if (searchQuery.equals(calendars.get(i).name)){
+
+                return i;
             }
         }
-        return null;
+        return -1;
     }
 }

@@ -4,10 +4,13 @@
     <list default="true" id="59450c62-18dd-4aec-b17e-38d40c37d5ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Calendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Setting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calendar/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,22 +88,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1580679670019" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580785220646">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580869501316">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580785220646" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580785220644">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580869501316" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580869501315">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580785220644" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580785220643">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580869501315" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580869501313">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580785220643" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580785220645">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580869501313" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580869501315">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580785220645" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580869501315" />
     <state x="114" y="72" key="new project wizard" timestamp="1580443497089">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
