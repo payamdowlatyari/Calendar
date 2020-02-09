@@ -1,15 +1,16 @@
-package com.calendar;
 //Payam Dowlatyari
 //View
+package com.calendar;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class View {
-   Date date;
+   private Date date;
 
    public View(Date date){
         this.date = date;
-   }
+   }//constructor
 
    public void viewByYear(Calendar calendar){
        System.out.println("YEAR: " + calendar.get(Calendar.YEAR));

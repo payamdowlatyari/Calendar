@@ -13,54 +13,93 @@ public class Main {
 
         int exitOrNot;
         int userIndex = 0;
+        boolean loggedIn = false;
+
         do {
+
+            if (!loggedIn) {
+
+                Scanner input = new Scanner(System.in);
+
+                System.out.println("######################################");
+                System.out.println("Welcome, Choose an option: ");//Main menu
+                System.out.println("1) LOGIN");
+                System.out.println("2) REGISTER");
+                System.out.println("3) EXIT");
+                System.out.println("######################################");
+
+
+                int option = input.nextInt();
+                boolean found = false;
+
+                if (option == 1) { //Login
+                    User user = login();
+
+                    for (int i = 0; i < users.size(); i++) {
+                        if (user.username.equals(users.get(i).username)) {
+                            System.out.println("You logged in!");
+                            user.displayDate();
+                            userIndex = i;
+                            found = true;
+                            loggedIn = true;
+                        }
+
+                    }
+                    if (!found) {
+                        System.out.println("Username is not found!");
+                        user = register();
+                        users.add(user);
+                        userIndex = users.indexOf(user);
+                        user.displayDate();
+                        loggedIn = true;
+
+                    }
+
+
+                } else if (option == 2) { //Register
+                    User user = register();
+                    users.add(user);
+                    userIndex = users.indexOf(user);
+                    user.displayDate();
+
+                    loggedIn = true;
+
+
+                } else {
+                    break;
+                }
+
+            }
 
             Scanner input = new Scanner(System.in);
 
-            System.out.println("Choose an option: ");//Main menu
-            System.out.println("1) LOGIN");
-            System.out.println("2) REGISTER");
-            System.out.println("3) EXIT");
 
-            int option = input.nextInt();
-
-            if (option == 1) { //Login
-                User user = login();
-
-                for (int i=0; i< users.size(); i++){
-                    if (user.username.equals(users.get(i).username)){
-                        System.out.println("You logged in!");
-                        userIndex = i;
-                    }
-
-                }
-
-            } else if (option == 2){ //Register
-                User user = register();
-                users.add(user);
-                userIndex = users.indexOf(user);
-
-            } else {
-                break;
-            }
-
-
+            System.out.println("######################################");
             System.out.println("Choose one:"); //Second menu
             System.out.println("1)EXIT");
             System.out.println("2)RESTART");
             System.out.println("3)CRATE A CALENDAR");
-            System.out.println("4)DISPLAY CALENDARS");
+            System.out.println("4)LIST OF CALENDARS");
             System.out.println("5)SEARCH CALENDARS");
+            System.out.println("6)DELETE A CALENDAR");
+            System.out.println("7)UPDATE A CALENDAR");
 
+            System.out.println("######################################");
             exitOrNot = input.nextInt();
 
-            if (exitOrNot == 3){//Creating a new calendar
+            if (exitOrNot == 2 ){
+            }
+
+            else if (exitOrNot == 3){//Creating a new calendar
                 Calendar calendar = createCalendar();
                 users.get(userIndex).calendars.add(calendar);
+                System.out.println("Your calendars: ");
+                users.get(userIndex).displayCalendars();
+
             }
             else if (exitOrNot == 4){//Displaying all the calendars
 
-                users.get(userIndex).displayCalendars();
+                users.get(userIndex).showCalendarLists();
 
             }
             else if (exitOrNot == 5) {//Searching calendars for a specific name
@@ -71,15 +110,20 @@ public class Main {
 
                 int calendarIndex = users.get(userIndex).searchCalendar(searchQuery);
 
-                Calendar calendar = users.get(userIndex).calendars.get(calendarIndex);
 
-                if (calendar != null) {
+                if (calendarIndex != -1) {
+
+                    Calendar calendar = users.get(userIndex).calendars.get(calendarIndex);
+
                     System.out.println(searchQuery + " exists!");
+
+                    System.out.println("######################################");
                     System.out.println("What would you like to do?");
                     System.out.println("1)DISPLAY EVENTS");
                     System.out.println("2)ADD AN EVENT");
                     System.out.println("3)REMOVE AN EVENT");
                     System.out.println("4)UPDATE AN EVENT");
+                    System.out.println("######################################");
 
                     int eventOption = input.nextInt();
 
@@ -93,7 +137,8 @@ public class Main {
                         users.get(userIndex).calendars.get(calendarIndex).addEvent(newEvent);
                     }
                     else if (eventOption == 3){
-                        System.out.println("What is the event title?");
+                        input = new Scanner(System.in);
+                        System.out.println("What is the event's title?");
                         String eventTitle = input.nextLine();
                         for (int i=0; i<users.get(userIndex).calendars.get(calendarIndex).events.size(); i++){
                             if (eventTitle.equals(users.get(userIndex).calendars.get(calendarIndex).events.get(i).title)){
@@ -103,7 +148,8 @@ public class Main {
                         }
                     }
                     else if (eventOption == 4){
-                        System.out.println("What is the event title?");
+                        input = new Scanner(System.in);
+                        System.out.println("What is the event's title?");
                         String eventTitle = input.nextLine();
                         for (int i=0; i<users.get(userIndex).calendars.get(calendarIndex).events.size(); i++){
                             if (eventTitle.equals(users.get(userIndex).calendars.get(calendarIndex).events.get(i).title)){
@@ -118,6 +164,42 @@ public class Main {
                 else {
                     System.out.println(searchQuery + " does not exist!");
                 }
+            }
+            else if (exitOrNot == 6){
+
+
+                input = new Scanner(System.in);
+                System.out.println("What is the calendar's name?");
+                String calendarsName = input.nextLine();
+                int calendarIndex = users.get(userIndex).searchCalendar(calendarsName);
+
+                if (calendarIndex != -1) {
+
+                    users.get(userIndex).deleteCalendar(users.get(userIndex).calendars.get(calendarIndex));
+                    System.out.println(calendarsName + " has been deleted");
+
+                }
+                else {
+                    System.out.println("Calendar " + calendarsName + " does not exist");
+                }
+            }
+            else if (exitOrNot == 7) {
+
+                input = new Scanner(System.in);
+                System.out.println("What is the calendar's name?");
+                String calendarsName = input.nextLine();
+                int calendarIndex = users.get(userIndex).searchCalendar(calendarsName);
+
+                if (calendarIndex != -1) {
+
+                    users.get(userIndex).updateCalendar(users.get(userIndex).calendars.get(calendarIndex));
+                    System.out.println(calendarsName + " has been updated");
+
+                }
+                else {
+                    System.out.println("Calendar " + calendarsName + " does not exist");
+                }
+
             }
 
         }while (exitOrNot != 1);
@@ -135,7 +217,7 @@ public class Main {
         System.out.println("Create a username: ");
         String username = input.nextLine();
 
-        System.out.println("Would you like to change the Default setting? 1)Yes 2)No (theme: dark, timezone: US)");
+        System.out.println("Would you like to change the Default setting? 1)Yes 2)No (theme: dark, timezone: PST)");
         int response = input.nextInt();
         
         Setting setting = null;

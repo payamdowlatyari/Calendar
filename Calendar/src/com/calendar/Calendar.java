@@ -22,16 +22,16 @@ public class Calendar extends GregorianCalendar {
 
     public void addEvent(Event event){
         this.events.add(event);
-    }
+    }//adds an event
 
-    public void removeEvent(Event event){ this.events.remove(event); }
+    public void removeEvent(Event event){ this.events.remove(event); }//deletes an event
 
-    public void updateEvent(Event event, String title){
+    public void updateEvent(Event event, String title){//updates an event
         this.events.remove(event);
         Event newEvent = new Event(title);
         this.events.add(newEvent);
     }
-    public Event filterCalendar(String keyword){
+    public Event filterCalendar(String keyword){//filters an event based on the given keyword
 
         for (int i=0; i<events.size(); i++){
             if (events.get(i).title.equals(keyword) ){
@@ -46,9 +46,10 @@ public class Calendar extends GregorianCalendar {
 
     public Event selectEvent(int index){
         return events.get(index);
-    }
+    }//select and return an Event object by index
 
-    public void getEvent(){
+    public Event getEvent(int index){//getter method
+        return events.get(index);
 
     }
 

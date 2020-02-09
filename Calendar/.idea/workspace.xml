@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Calendar04:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="59450c62-18dd-4aec-b17e-38d40c37d5ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Calendar04_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/CountTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/CountTimer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Setting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Calendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Event.java" afterDir="false" />
@@ -39,7 +52,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -88,22 +105,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1580679670019" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580869501316">
+    <state x="458" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581140088556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580869501316" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580869501315">
+    <state x="458" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1581140088556" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1581209556427">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580869501315" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580869501313">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581209556427" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1581209556425">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580869501313" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580869501315">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581209556425" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1581209556423">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580869501315" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581209556423" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1581209556426">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581209556426" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1581140143312">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581140143312" />
     <state x="114" y="72" key="new project wizard" timestamp="1580443497089">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

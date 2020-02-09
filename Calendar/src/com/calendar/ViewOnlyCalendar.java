@@ -9,15 +9,15 @@ public class ViewOnlyCalendar extends Calendar {
 
     public ViewOnlyCalendar( String name) {
         super(name);
-    }
+    }//constructor
 
     public void setPublicity(boolean publicity) {
         this.publicity = publicity;
-    }
+    }//setter method
 
     public void setOwner(User owner) {
         this.owner = owner;
-    }
+    }//setter method
 
     public boolean checkIfAuthorized() {
         return publicity;

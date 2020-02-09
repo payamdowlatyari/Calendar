@@ -8,7 +8,7 @@ import java.util.TimerTask;
 public class CountTimer extends TimerTask {
 
     Date remainTime;
-    int countdown = 100;
+    int countdown = 60;
 
     public void countRemainTime(Date startingTime){
 

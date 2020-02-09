@@ -12,12 +12,12 @@ public class Event {
     Date startingTime;
     Date endingTime;
     boolean isRepeat;
-    //Date endtime;
+    Date endtime;
     CountTimer timer;
 
     public Event(String title){
         this.title = title;
-    }
+    }//constructor
 
 
     public void setHour(int hour){
@@ -40,7 +40,7 @@ public class Event {
         isRepeat = repeat;
     }
 
-    public void viewTimer(){
+    public void viewTimer(){//display the timer
 
         this.timer = new CountTimer();
         timer.countRemainTime(startingTime);
