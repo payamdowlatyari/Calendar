@@ -1,28 +1,35 @@
 //Payam Dowlatyari
-//Calendar
+//GeneralCalendar
 package com.calendar;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
-public class Calendar extends GregorianCalendar {
+public class GeneralCalendar implements Icalendar {
 
-    String calendarType;
-    String name;
+    private String name;
     ArrayList<Event> events;
     View view;
 
-    public Calendar(String name){//constructor
-
-        this.calendarType = "Gregorian";
+    public GeneralCalendar(String name){
         this.name = name;
-        this.view = new View(getTime());
         this.events = new ArrayList<>(10);
+
+    }
+
+    @Override
+    public boolean publicity() {
+        return false;
     }
 
     public void addEvent(Event event){
         this.events.add(event);
     }//adds an event
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
 
     public void removeEvent(Event event){ this.events.remove(event); }//deletes an event
 
@@ -31,6 +38,7 @@ public class Calendar extends GregorianCalendar {
         Event newEvent = new Event(title);
         this.events.add(newEvent);
     }
+
     public Event filterCalendar(String keyword){//filters an event based on the given keyword
 
         for (int i=0; i<events.size(); i++){
@@ -52,7 +60,4 @@ public class Calendar extends GregorianCalendar {
         return events.get(index);
 
     }
-
-
-
 }

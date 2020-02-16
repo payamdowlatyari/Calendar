@@ -7,23 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59450c62-18dd-4aec-b17e-38d40c37d5ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Calendar04_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/CalendarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/GeneralCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/Icalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/PrivateCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/PublicCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/calendar/UserBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/CountTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/CountTimer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Setting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/CountTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/ViewOnlyCalendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calendar/Calendar.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Setting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/calendar/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,7 +45,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1X5pdZBgUblSqcLMtS347HjE4YX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -101,41 +104,53 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1580679670019">
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1581717401733">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1580679670019" />
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1581717401733" />
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1581822156784">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1581822156784" />
     <state x="458" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581140088556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1581140088556" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1581209556427">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581743601137">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581209556427" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1581209556425">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1581743601137" />
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1581823721441">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581209556425" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1581209556423">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581823721441" />
+    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1581823721438">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581209556423" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1581209556426">
+    <state width="1398" height="228" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581823721438" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1581823721436">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581209556426" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581823721436" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1581823721440">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="228" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581823721440" />
     <state x="208" y="31" key="SettingsEditor" timestamp="1581140143312">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581140143312" />
+    <state x="312" y="37" width="816" height="825" key="find.popup" timestamp="1581817514602">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="312" y="37" width="816" height="825" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1581817514602" />
     <state x="114" y="72" key="new project wizard" timestamp="1580443497089">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="114" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1580443497089" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1580425572779">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1581391376714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1580425572779" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1581391376714" />
   </component>
 </project>

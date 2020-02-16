@@ -19,17 +19,18 @@ public class Main {
 
             if (!loggedIn) {
 
-                Scanner input = new Scanner(System.in);
 
-                System.out.println("######################################");
-                System.out.println("Welcome, Choose an option: ");//Main menu
-                System.out.println("1) LOGIN");
-                System.out.println("2) REGISTER");
-                System.out.println("3) EXIT");
-                System.out.println("######################################");
+//                Scanner input = new Scanner(System.in);
+//
+//                System.out.println("######################################");
+//                System.out.println("Welcome, Choose an option: ");//Main menu
+//                System.out.println("1) LOGIN");
+//                System.out.println("2) REGISTER");
+//                System.out.println("3) EXIT");
+//                System.out.println("######################################");
+//                int option = input.nextInt();
 
-
-                int option = input.nextInt();
+                int option = mainMenu();//refactored
                 boolean found = false;
 
                 if (option == 1) { //Login
@@ -70,28 +71,33 @@ public class Main {
                 }
 
             }
+//            System.out.println("######################################");
+//            System.out.println("Choose one:"); //Second menu
+//            System.out.println("1)EXIT");
+//            System.out.println("2)RESTART");
+//            System.out.println("3)CRATE A CALENDAR");
+//            System.out.println("4)LIST OF CALENDARS");
+//            System.out.println("5)SEARCH CALENDARS");
+//            System.out.println("6)DELETE A CALENDAR");
+//            System.out.println("7)UPDATE A CALENDAR");
+//
+//            System.out.println("######################################");
+//            exitOrNot = input.nextInt();
 
-            Scanner input = new Scanner(System.in);
-
-
-            System.out.println("######################################");
-            System.out.println("Choose one:"); //Second menu
-            System.out.println("1)EXIT");
-            System.out.println("2)RESTART");
-            System.out.println("3)CRATE A CALENDAR");
-            System.out.println("4)LIST OF CALENDARS");
-            System.out.println("5)SEARCH CALENDARS");
-            System.out.println("6)DELETE A CALENDAR");
-            System.out.println("7)UPDATE A CALENDAR");
-
-            System.out.println("######################################");
-            exitOrNot = input.nextInt();
+            exitOrNot = secondMenu();//refactored
 
             if (exitOrNot == 2 ){
             }
 
             else if (exitOrNot == 3){//Creating a new calendar
-                Calendar calendar = createCalendar();
+
+                //Calendar calendar = createCalendar();
+                //Type Calendar does not exit anymore and changed to the interface Icalendar
+                //###################################################################################
+
+                Icalendar calendar = createCalendar();
+                //###################################################################################
+
                 users.get(userIndex).calendars.add(calendar);
                 System.out.println("Your calendars: ");
                 users.get(userIndex).displayCalendars();
@@ -104,7 +110,8 @@ public class Main {
             }
             else if (exitOrNot == 5) {//Searching calendars for a specific name
 
-                input = new Scanner(System.in);
+
+                Scanner input = new Scanner(System.in);
                 System.out.println("What is the calendar's name?");
                 String searchQuery = input.nextLine();
 
@@ -113,19 +120,28 @@ public class Main {
 
                 if (calendarIndex != -1) {
 
-                    Calendar calendar = users.get(userIndex).calendars.get(calendarIndex);
+                    //Calendar calendar = users.get(userIndex).calendars.get(calendarIndex);
+                    //Type Calendar does not exit anymore and changed to the interface Icalendar
+                    //###################################################################################
+
+                    Icalendar calendar = users.get(userIndex).calendars.get(calendarIndex);
+                    //###################################################################################
+
 
                     System.out.println(searchQuery + " exists!");
 
-                    System.out.println("######################################");
-                    System.out.println("What would you like to do?");
-                    System.out.println("1)DISPLAY EVENTS");
-                    System.out.println("2)ADD AN EVENT");
-                    System.out.println("3)REMOVE AN EVENT");
-                    System.out.println("4)UPDATE AN EVENT");
-                    System.out.println("######################################");
+//                    System.out.println("######################################");
+//                    System.out.println("What would you like to do?");
+//                    System.out.println("1)DISPLAY EVENTS");
+//                    System.out.println("2)ADD AN EVENT");
+//                    System.out.println("3)REMOVE AN EVENT");
+//                    System.out.println("4)UPDATE AN EVENT");
+//                    System.out.println("######################################");
+//
+//                    int eventOption = input.nextInt();
 
-                    int eventOption = input.nextInt();
+
+                    int eventOption = thirdMenu();//refactored
 
                     if (eventOption == 1){
                         for (int i=0; i<calendar.events.size(); i++){
@@ -168,7 +184,7 @@ public class Main {
             else if (exitOrNot == 6){
 
 
-                input = new Scanner(System.in);
+                Scanner input = new Scanner(System.in);
                 System.out.println("What is the calendar's name?");
                 String calendarsName = input.nextLine();
                 int calendarIndex = users.get(userIndex).searchCalendar(calendarsName);
@@ -185,7 +201,7 @@ public class Main {
             }
             else if (exitOrNot == 7) {
 
-                input = new Scanner(System.in);
+                Scanner input = new Scanner(System.in);
                 System.out.println("What is the calendar's name?");
                 String calendarsName = input.nextLine();
                 int calendarIndex = users.get(userIndex).searchCalendar(calendarsName);
@@ -230,7 +246,10 @@ public class Main {
         setting = settings();
 
         }
-        User user = new User(username, setting);
+        //User user = new User(username, setting); Using builder pattern change to the following
+        //###################################################################################
+        User user  = new UserBuilder().setUsername(username).setSettings(setting).getUser();
+        //###################################################################################
 
         return user;
     }
@@ -244,12 +263,16 @@ public class Main {
 
         Setting setting = new Setting("dark","US");
 
-        User user = new User(username, setting);
+//        User user = new User(username, setting);Using builder pattern change to the following
+        //###################################################################################
+        User user  = new UserBuilder().setUsername(username).setSettings(setting).getUser();
+        //###################################################################################
+
 
         return user;
     }
 
-    public static Calendar createCalendar(){//method for creating a new Calendar object
+    public static Icalendar createCalendar(){//method for creating a new Calendar object
         Scanner input = new Scanner(System.in);
 
         System.out.println("What type of calendar? 1)Public or 2)Private");
@@ -257,10 +280,19 @@ public class Main {
 
         if (publicity == 1) {
 
-            input = new Scanner(System.in);
-            System.out.println("Enter your calendar's name:");
-            String calendarName = input.nextLine();
-            Calendar calendar = new Calendar(calendarName);
+//            input = new Scanner(System.in);
+//            System.out.println("Enter your calendar's name:");
+//            String calendarName = input.nextLine();
+//            Calendar calendar = new Calendar(calendarName);
+
+            // using factory pattern, creating a calendar has changed to the following
+
+            //###################################################################################
+
+            CalendarFactory cal = new CalendarFactory();
+            Icalendar calendar = cal.getInstance("public");
+            //###################################################################################
+
 
             System.out.println("Would you like to add an event? 1)Yes 2)No");
             int response = input.nextInt();
@@ -277,12 +309,20 @@ public class Main {
         }
         else {
 
-            input = new Scanner(System.in);
-            System.out.println("Enter your calendar's name: ");
-            String calendarName = input.nextLine();
-            ViewOnlyCalendar calendar = new ViewOnlyCalendar(calendarName);
+//            input = new Scanner(System.in);
+//            System.out.println("Enter your calendar's name: ");
+//            String calendarName = input.nextLine();
+//            ViewOnlyCalendar calendar = new ViewOnlyCalendar(calendarName);
 
-            calendar.setPublicity(false);
+            // using factory pattern, creating a calendar has changed to the following
+
+            //###################################################################################
+
+            CalendarFactory cal = new CalendarFactory();
+            Icalendar calendar = cal.getInstance("private");
+            //###################################################################################
+
+            //calendar.setPublicity(false);
 
             System.out.println("Would you like to add an event? 1)Yes 2)No");
             int response = input.nextInt();
@@ -370,5 +410,48 @@ public class Main {
         Setting setting = new Setting(theme,timeZone);
 
         return setting;
+    }
+
+    public static int mainMenu(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("######################################");
+        System.out.println("Welcome, Choose an option: ");//Main menu
+        System.out.println("1) LOGIN");
+        System.out.println("2) REGISTER");
+        System.out.println("3) EXIT");
+        System.out.println("######################################");
+        return input.nextInt();
+    }
+
+    public static int secondMenu(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("######################################");
+        System.out.println("Choose one:"); //Second menu
+        System.out.println("1)EXIT");
+        System.out.println("2)RESTART");
+        System.out.println("3)CRATE A CALENDAR");
+        System.out.println("4)LIST OF CALENDARS");
+        System.out.println("5)SEARCH CALENDARS");
+        System.out.println("6)DELETE A CALENDAR");
+        System.out.println("7)UPDATE A CALENDAR");
+        System.out.println("######################################");
+        return input.nextInt();
+    }
+
+    public static int thirdMenu(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("######################################");
+        System.out.println("What would you like to do?");
+        System.out.println("1)DISPLAY EVENTS");
+        System.out.println("2)ADD AN EVENT");
+        System.out.println("3)REMOVE AN EVENT");
+        System.out.println("4)UPDATE AN EVENT");
+        System.out.println("######################################");
+
+        return input.nextInt();
+
     }
 }
