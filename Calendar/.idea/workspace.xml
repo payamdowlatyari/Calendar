@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Calendar04:jar" />
+      <artifact name="Calendar04:jar2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59450c62-18dd-4aec-b17e-38d40c37d5ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/CalendarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/GeneralCalendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/Icalendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/PrivateCalendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/PublicCalendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/calendar/UserBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Calendar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/ViewOnlyCalendar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/Calendar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/calendar/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/calendar/ViewOnlyCalendar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/GeneralCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/GeneralCalendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/PrivateCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/PrivateCalendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/PublicCalendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calendar04/com/calendar/PublicCalendar.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,26 +107,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1581743601137" />
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1581823721441">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1581825362497">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581823721441" />
-    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1581823721438">
+    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581825362497" />
+    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1581825362496">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581823721438" />
-    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1581823721436">
+    <state width="1398" height="228" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581825362496" />
+    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1581825362496">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581823721436" />
-    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1581823721440">
+    <state width="1398" height="228" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581825362496" />
+    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1581825362497">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581823721440" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1581140143312">
+    <state width="1398" height="228" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581825362497" />
+    <state x="208" y="31" key="SettingsEditor" timestamp="1581888500843">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581140143312" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581888500843" />
     <state x="312" y="37" width="816" height="825" key="find.popup" timestamp="1581817514602">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
